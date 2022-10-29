@@ -24,6 +24,11 @@ public class StudentController {
 		return "Hi, Saswat your crud app has been successfully deployed to azure";
 	}
 
+	@GetMapping("/welcome")
+	public String welcome(){
+		return "welcome to deployement";
+	}
+
 	@PostMapping("/createStudent")
 	public Student createProduct(@RequestBody Student product) {
 		return service.createProduct(product);
