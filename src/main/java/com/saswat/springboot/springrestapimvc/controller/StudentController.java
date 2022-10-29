@@ -19,6 +19,11 @@ public class StudentController {
 	@Autowired
 	ProductService service;
 
+	@GetMapping("/")
+	public String test() {
+		return "Hi, Saswat your crud app has been successfully deployed to azure";
+	}
+
 	@PostMapping("/createStudent")
 	public Student createProduct(@RequestBody Student product) {
 		return service.createProduct(product);
